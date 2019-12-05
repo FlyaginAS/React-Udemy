@@ -1,14 +1,18 @@
 import React from 'react';
-const SearchPanel = ()=>{
-    const searchText = 'Type here to search';
-    const searchStyle = {
-        fontSize: '20px'
-    };
-    return(
-        <input
-            placeholder={searchText}
-            style={searchStyle}
-        />
-    );
+
+import './search-panel.css';
+import ItemStatusFilter from './item-status-filter';
+
+const SearchPanel = () => {
+  return (
+      <React.Fragment>
+          <input type="text"
+                 className="form-control search-input"
+                 placeholder="type to search" />
+          <ItemStatusFilter/>
+      </React.Fragment>
+
+  );
 };
-export  default  SearchPanel;
+
+export default SearchPanel;

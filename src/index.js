@@ -16,7 +16,7 @@ const App = ()=>{
     return(
         <div>
             <span>{(new Date()).toString()}</span>
-            <AppHeader/>
+            <AppHeader toDo={1} done={3}/>
             <SearchPanel/>
             <TodoList todos={todoData}/>
         </div>
