@@ -18,7 +18,10 @@ const App = ()=>{
             <span>{(new Date()).toString()}</span>
             <AppHeader toDo={1} done={3}/>
             <SearchPanel/>
-            <TodoList todos={todoData}/>
+            <TodoList
+                todos={todoData}
+                onDeleted = {(id)=>console.log('del', id)}
+            />
         </div>
     );
 };
